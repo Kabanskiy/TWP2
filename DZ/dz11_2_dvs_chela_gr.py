@@ -14,5 +14,7 @@ elif year1 == year2 and month1 < month2:
     print('Первый старше')
 elif year1 == year2 and month1 == month2 and date1 < date2:
     print('Первый старше')
+elif year1 == year2 and month1 == month2 and date1 == date2:
+    print('Ровесники')
 else:
     print('Второй старше')
