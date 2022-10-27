@@ -8,7 +8,8 @@ response = requests.get(ssilka)
 
 soup = BeautifulSoup(response.text, 'lxml') # html.parser - помедленнее
 
-data = soup.find_all('div', class_ = "col-lg-4 col-md-6 mb-4") # find позволяет получить содержимое тега. find_all - ищет все данные
+data = soup.find_all('div', class_ = "col-lg-4 col-md-6 mb-4") # find позволяет получить содержимое тега.
+# find_all - ищет все данные страницы
 
 for i in data:
     name = i.find('h4', class_="card-title").text.replace('\n', '')
