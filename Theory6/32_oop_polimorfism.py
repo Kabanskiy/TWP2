@@ -1,5 +1,5 @@
 class Mashina():
-    def __init__(self, model, marka):
+    def __init__(self, model = 'Q5', marka = 'Audi'):
         self.model = model
         self.marka = marka
 
@@ -12,8 +12,10 @@ class Toyota(Mashina):
     def info(self):
         print('Модель: ' + self.model)
 
+
+car = Mashina(model = 'G500', marka = 'Mercedes') # если в начале стоят значиения по умолчанию, то можно изменить здесь
+car.info()
+
 to = Toyota('tundra')
 to.info()
 
-car = Mashina('camry', 'toyota')
-car.info()
