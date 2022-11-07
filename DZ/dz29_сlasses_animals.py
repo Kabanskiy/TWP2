@@ -7,7 +7,7 @@ class Animals:
         self.dich = ' дикий'
         self.predator = 'медведь'
 
-    def mlecopitaushie(self):
+    def _mlecopitaushie(self):
         print('Животное ' + self.vid + ' - ' + self.otryad)
     def zoo(self):
         print(self.vid + self.dich)
@@ -16,6 +16,6 @@ class Animals:
         print(self.predator + ' тоже ' + self.dich)
 
 zver = Animals('заяц', "травоядное")
-zver.mlecopitaushie()
+zver._mlecopitaushie()
 zver.zoo()
 zver.vseyadn()
