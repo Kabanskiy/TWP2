@@ -40,8 +40,13 @@ conn.commit() # комитим для сохранени базы
 # print(a)
 
 # замена данных:
-zapros_zamena = """UPDATE tablitsa1 SET login='Niko' WHERE login='Ivan';""" # SET говорит о том, НА что будем менять. WHERE - исходное слово
-curs.execute(zapros_zamena)
+# zapros_zamena = """UPDATE tablitsa1 SET password='1111111' WHERE login='Niko';""" # SET говорит о том, НА что будем менять. WHERE - исходное слово
+# curs.execute(zapros_zamena)
+# conn.commit()
+
+# удаление:
+zapros_udalenie = """DELETE FROM tablitsa1 WHERE login = 'Uassya';"""
+curs.execute(zapros_udalenie)
 conn.commit()
 
 curs.close() # после отработки обязательно закрываем методом close
