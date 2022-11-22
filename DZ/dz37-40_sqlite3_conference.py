@@ -18,6 +18,7 @@
 # 38: Заполните таблицы из предыдущего занятия данными (минимум шесть записей на каждую таблицу).
 # 39: Вывести данные из таблицы, созданной на предыдущем уроке.
 # Вывод всех данных из таблицы и вывод из таблицы данных подчиняющихся какому-то условию.
+# 40: В вашей БД из предыдущего занятия удалите половину записей. А вторую половину измените
 import sqlite3
 
 conn = sqlite3.connect('dz37_sqlite3.db')
@@ -47,10 +48,17 @@ conn.commit()
 # zapros_conference_6 = """INSERT INTO Conference VALUES('Shcwarznegger', '03.12.', 'academy', 'Yarek', 'BELAZ', '1 day', 'Luka', '1');"""
 # cursor.execute(zapros_conference_6)
 # conn.commit()
+# zapros_conference_del = """DELETE FROM Conference WHERE location='universitet';"""
+# cursor.execute(zapros_conference_del)
+# conn.commit()
 
 zapros_spravochnik = """CREATE TABLE IF NOT EXISTS Personalii (FIO TEXT, stepen TEXT, science_way TEXT, job TEXT, kafedra TEXT, dolzhnost TEXT,
 country TEXT, city TEXT, adress TEXT, phone TINYINT, mail TEXT);"""
 cursor.execute(zapros_spravochnik)
+conn.commit()
+
+zapros_spravochnik_up = """UPDATE Personalii SET stepen='professional' WHERE stepen='rabotyaga';"""
+cursor.execute(zapros_spravochnik_up)
 conn.commit()
 
 # tuple2 = ('Chuck Norris', 'docent', 'theckvandology', 'karate', 'dzudovedenie', 'coach', 'USA', 'Texas', 'Holliwood st.', '+100500', 'chuck@norris')
@@ -83,15 +91,15 @@ date_zezda DATE, hotels_need TEXT, date_viezda DATE);"""
 cursor.execute(zapros_infa)
 conn.commit()
 
-zapros_viborka = """SELECT * FROM Spikers;"""
-cursor.execute(zapros_viborka)
-a = cursor.fetchall()
-print(a)
-
-zapros_viborka2 = """SELECT * FROM Spikers WHERE speaker = 'Diogen';"""
-cursor.execute(zapros_viborka2)
-b = cursor.fetchall()
-print(b)
+# zapros_viborka = """SELECT * FROM Spikers;"""
+# cursor.execute(zapros_viborka)
+# a = cursor.fetchall()
+# print(a)
+#
+# zapros_viborka2 = """SELECT * FROM Spikers WHERE speaker = 'Diogen';"""
+# cursor.execute(zapros_viborka2)
+# b = cursor.fetchall()
+# print(b)
 
 # spisok2 = ['Neznaika', '22.11', '01.11.', 'Luna', 'yes', '23.11.', 'grusheviy sad', '25.11.']
 # zapros_infa_2 = """INSERT INTO Spikers VALUES(?, ?, ?, ?, ?, ?, ?, ?);"""
