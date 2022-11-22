@@ -23,22 +23,26 @@ conn.commit() # комитим для сохранени базы
 # curs.execute(zapros3, tuple1) # и ставим название списка или кортежа из которого добавляем
 # conn.commit()
 
-zapros_viborka_dannih = """SELECT * FROM tablitsa1 WHERE login='Ivan'""" # *-значит берем все поля, если не все, то ("название полей")
-# WHERE означает из какого места берем
-curs.execute(zapros_viborka_dannih)
-# чтобы забрать эти данные, нужно использовать метод. Их 3:
-# fetchone
+# zapros_viborka_dannih = """SELECT * FROM tablitsa1 WHERE login='Ivan'""" # *-значит берем все поля, если не все, то ("название полей")
+# # WHERE означает из какого места берем
+# curs.execute(zapros_viborka_dannih)
+# # чтобы забрать эти данные, нужно использовать метод. Их 3:
+# # fetchone
+# a = curs.fetchone() # забирает первую запись
+# print(a)
+#
+# # fetchmany
+# a = curs.fetchmany(2) # в () указываем сколько записей хотим забрать
+# print(a)
+#
+# # fetchall
+# a = curs.fetchall() # забирает все записи
+# print(a)
 
-a = curs.fetchone() # забирает первую запись
-print(a)
-
-# fetchmany
-a = curs.fetchmany(2) # в () указываем сколько записей хотим забрать
-print(a)
-
-# fetchall
-a = curs.fetchall() # забирает все записи
-print(a)
+# замена данных:
+zapros_zamena = """UPDATE tablitsa1 SET login='Niko' WHERE login='Ivan';""" # SET говорит о том, НА что будем менять. WHERE - исходное слово
+curs.execute(zapros_zamena)
+conn.commit()
 
 curs.close() # после отработки обязательно закрываем методом close
 conn.close() # после отработки обязательно закрываем методом close
