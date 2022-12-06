@@ -1,4 +1,4 @@
-h1{
+h1, h3{
 text-align: right;
 }
 h2{
@@ -19,4 +19,7 @@ width: 300px;
 text-align: justify;
 }
 
-
+.td1, .cursiv {
+color: red;
+font-style: italic;
+}
