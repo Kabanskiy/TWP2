@@ -1,0 +1,19 @@
+Сделайте все ссылки в состоянии :hover красными и
+неподчеркнутыми, в состоянии :link - голубыми, в состоянии :visited -
+зелеными, в состоянии :active - черными.
+<a href="#">ссылка</a>
+
+
+a:hover{
+    color: red;
+    text-decoration: none;
+}
+a:link{
+    color: blue;
+}
+a:viited{
+    color: green;
+}
+a:active{
+    color: black;
+}
