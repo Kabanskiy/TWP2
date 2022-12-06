@@ -1,12 +1,9 @@
-h1, h3{
-text-align: right;
-}
-h2{
-text-align: center;
-width: 300px;
+img{
+    width: 10%;
+    height: 10%;
 }
 table{
-width: 500px;
+width: 300px;
 }
 th{
 text-align: left;
@@ -24,3 +21,8 @@ color: red;
 font-style: italic;
 }
 #tab1, #tab1 tr td { border: 2px solid blue;}
+
+img:hover{
+    width: 30%;
+    height: 30%;
+}
