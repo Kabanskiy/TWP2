@@ -1,0 +1,27 @@
+p {
+font-family: "Times New Roman";
+font-size: 13px;
+line-height: 20px;
+}
+p {font: 13px/20px Times New Roman;}
+
+p {
+width: 300px;
+font-family: Arial;
+color: red;
+font-size: 40px;
+font-weight: bold;
+}
+p {font: bold 40px/40px Arial;
+   width: 300px;
+   color: red;}
+p {
+font-family: Arial;
+font-size: 40px;
+font-weight: bold;
+text-indent: 50px;
+font-style: italic;
+line-height: 60px;
+}
+p {bold italic 40px/60px Arial;
+   text-indent: 50px; }
