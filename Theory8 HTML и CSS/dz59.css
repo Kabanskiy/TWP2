@@ -1,0 +1,16 @@
+h1, h3{
+font: italic 20px/60px Comic Sans MS;
+color: blue;
+}
+
+h2{
+text-align: center;
+font: bold 16px/50px Arial;
+color: brown;
+}
+
+.Liiink{
+weight: 20%;
+height: 70px;
+border: 2px solid blue;
+}
